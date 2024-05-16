@@ -9,7 +9,7 @@ import { MongooseModule } from '@nestjs/mongoose';
   imports: [ConfigModule.forRoot({
     envFilePath: '.env',
     isGlobal: true
-  }), MongooseModule.forRoot(process.env.DATABASE_URI, {dbName: process.env.DATABASE_NAME}),BookModule ],
+  }), MongooseModule.forRoot('mongodb+srv://pratiknavlani7572:D2BqW41U7fwQ9LI6@cluster0.17fzhy9.mongodb.net/', {dbName: 'sample01'}),BookModule ],
   controllers: [AppController],
   providers: [AppService],
 })
